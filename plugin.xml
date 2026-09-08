@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="crdv-plugin-android-statusbar-inset"
+    version="1.0.0">
+  <name>StatusBarInset</name>
+  <description>
+    Returns the real, on-device status bar inset height (dp) via WindowInsetsCompat,
+    so JS-side layout code (e.g. AdMob banner offset) can match it exactly instead of
+    guessing a fixed constant. Android only; no-op stub is not needed since JS callers
+    should feature-detect (window.cordova.plugins &amp;&amp; window.cordova.plugins.statusBarInset).
+  </description>
+  <license>MIT</license>
+
+  <js-module src="www/statusBarInset.js" name="StatusBarInset">
+    <clobbers target="cordova.plugins.statusBarInset" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="StatusBarInset">
+        <param name="android-package" value="com.timetable.stella.statusbarinset.StatusBarInsetPlugin" />
+      </feature>
+    </config-file>
+    <source-file src="src/android/com/timetable/stella/statusbarinset/StatusBarInsetPlugin.java"
+                 target-dir="src/com/timetable/stella/statusbarinset" />
+  </platform>
+</plugin>
