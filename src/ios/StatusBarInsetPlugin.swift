@@ -22,12 +22,12 @@ class StatusBarInsetPlugin: CDVPlugin {
     func getInsetTopPt(command: CDVInvokedUrlCommand) {
         DispatchQueue.main.async {
             guard let window = self.viewController.view.window else {
-                let result = CDVPluginResult(status: .error, messageAsString: "window_not_ready")
+                let result = CDVPluginResult(status: .error, messageAs: "window_not_ready")
                 self.commandDelegate.send(result, callbackId: command.callbackId)
                 return
             }
             let topPt = Int32(window.safeAreaInsets.top.rounded())
-            let result = CDVPluginResult(status: .ok, messageAsInt: topPt)
+            let result = CDVPluginResult(status: .ok, messageAs: topPt)
             self.commandDelegate.send(result, callbackId: command.callbackId)
         }
     }
