@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="crdv-plugin-statusbar-inset"
-    version="2.0.1">
+    version="2.0.2">
   <name>StatusBarInset</name>
   <description>
     Returns the real, on-device status bar / top-safe-area inset height via native APIs

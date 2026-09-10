@@ -1,6 +1,6 @@
 {
   "name": "crdv-plugin-statusbar-inset",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Cordova plugin (Android + iOS): real on-device status bar / top-safe-area inset height via native APIs (WindowInsetsCompat / UIView.safeAreaInsets).",
   "cordova": {
     "id": "crdv-plugin-statusbar-inset",
